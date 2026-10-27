@@ -1,0 +1,39 @@
+== Host ==
+codespaces-37a72a
+ 09:14:55 up 20 min,  0 user,  load average: 0.69, 2.61, 2.06
+== Disk ==
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          32G   11G   19G  37% /
+shm              64M     0   64M   0% /dev/shm
+/dev/root        29G   15G   15G  50% /vscode
+/dev/sdb1        44G  2.4G   40G   6% /tmp
+/dev/loop4       32G   11G   19G  37% /workspaces
+== Memory ==
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       1.9Gi       409Mi        64Mi       5.8Gi       5.9Gi
+Swap:             0B          0B          0B
+== Top CPU ==
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+codespa+    1751  5.3  4.2 18764004 348224 ?     Sl   09:11   0:10 /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/node --dns-result-order=ipv4first /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+codespa+    1728  2.3  2.1 1814760 176356 ?      Sl   09:11   0:04 /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/node /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/out/server-main.js --log trace --force-disable-user-env --server-data-dir /home/codespace/.vscode-remote --accept-server-license-terms --host 127.0.0.1 --port 0 --connection-token-file /home/codespace/.vscode-remote/data/Machine/.connection-token-e646868227c3e3a9e3f24277c8c7220be42c0be7 --extensions-download-dir /home/codespace/.vscode-remote/extensionsCache --install-builtin-extension GitHub.vscode-pull-request-github --install-builtin-extension github.github-vscode-theme --install-builtin-extension github.codespaces --do-not-sync --start-server  --enable-remote-auto-shutdown --skip-requirements-check
+codespa+    1767  1.0  1.6 18552144 136468 ?     Sl   09:11   0:02 /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/node /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/out/bootstrap-fork --type=agentHost --logsPath /home/codespace/.vscode-remote/data/logs/20261027T091136 --user-data-dir /home/codespace/.vscode-remote/data --telemetry-level all
+root         427  0.2  1.1 1958788 95892 ?       Sl   09:10   0:00 dockerd --containerd /run/containerd/containerd.sock --dns 168.63.129.16
+codespa+    2084  0.1  0.8 1541756 69996 ?       Sl   09:11   0:00 /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/node /vscode/bin/linux-x64/e646868227c3e3a9e3f24277c8c7220be42c0be7/out/bootstrap-fork --type=ptyHost --logsPath /home/codespace/.vscode-remote/data/logs/20261027T091136
+== Failed services ==
+systemd not running (container or non-systemd host)
+== Listening ports ==
+Netid State  Recv-Q Send-Q   Local Address:Port  Peer Address:PortProcess                               
+udp   UNCONN 0      0        127.0.0.53%lo:53         0.0.0.0:*                                         
+udp   UNCONN 0      0      10.0.11.92%eth0:68         0.0.0.0:*                                         
+tcp   LISTEN 0      4096         127.0.0.1:39829      0.0.0.0:*                                         
+tcp   LISTEN 0      4096     127.0.0.53%lo:53         0.0.0.0:*                                         
+tcp   LISTEN 0      128            0.0.0.0:2222       0.0.0.0:*                                         
+tcp   LISTEN 0      4096         127.0.0.1:40695      0.0.0.0:*                                         
+tcp   LISTEN 0      4096         127.0.0.1:13005      0.0.0.0:*                                         
+tcp   LISTEN 0      512          127.0.0.1:16636      0.0.0.0:*                                         
+tcp   LISTEN 0      512          127.0.0.1:16634      0.0.0.0:*                                         
+tcp   LISTEN 0      512          127.0.0.1:16635      0.0.0.0:*                                         
+tcp   LISTEN 0      511          127.0.0.1:33167      0.0.0.0:*    users:(("MainThread",pid=1767,fd=29))
+tcp   LISTEN 0      511          127.0.0.1:37287      0.0.0.0:*    users:(("MainThread",pid=1728,fd=21))
+tcp   LISTEN 0      128            0.0.0.0:2000       0.0.0.0:*                                         
+tcp   LISTEN 0      4096         127.0.0.1:12563      0.0.0.0:*                                         
