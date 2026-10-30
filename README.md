@@ -30,5 +30,9 @@ chmod +x scripts/server-health-check.sh
 Ubuntu (GitHub Codespaces container, no systemd)
 
 ## Roadmap
+- Disk usage alert script (cron + threshold)
+- SSH hardening checklist
+- KVM VM health-check script
+- Runbook: network connectivity troubleshooting
 
 Author: Jyothi Prakash
