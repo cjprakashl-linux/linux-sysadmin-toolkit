@@ -7,6 +7,7 @@ Practical scripts and runbooks for common Linux server problems.
 |---|---|
 | scripts/server-health-check.sh | Snapshot of disk, memory, CPU, failed services and open ports |
 | scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
+| scripts/log-cleanup.sh | Safe log compression and cleanup (dry-run by default) |
 
 ## Runbooks
 | Runbook | Purpose |
@@ -25,7 +26,6 @@ chmod +x scripts/server-health-check.sh
 Ubuntu (GitHub Codespaces container, no systemd)
 
 ## Roadmap
-- Log cleanup script
 - Runbooks: high CPU, service down
 
 Author: Jyothi Prakash
