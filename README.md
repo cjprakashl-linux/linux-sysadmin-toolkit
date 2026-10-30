@@ -15,6 +15,7 @@ Practical scripts and runbooks for common Linux server problems.
 | docs/disk-full-troubleshooting.md | Diagnose and fix "disk full" issues |
 | docs/backup-with-cron.md | Schedule and verify automated backups |
 | docs/high-cpu-troubleshooting.md | Diagnose and fix high CPU usage |
+| docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
 
 ## Usage
 ```
@@ -29,6 +30,5 @@ chmod +x scripts/server-health-check.sh
 Ubuntu (GitHub Codespaces container, no systemd)
 
 ## Roadmap
-- Runbooks: high CPU, service down
 
 Author: Jyothi Prakash
