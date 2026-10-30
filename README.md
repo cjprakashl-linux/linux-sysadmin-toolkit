@@ -29,7 +29,7 @@ sudo ./scripts/kvm-health-check.sh
 ```
 
 ## Tested on
-Ubuntu (GitHub Codespaces container, no systemd)
+Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
 
 ## Roadmap
 - Disk usage alert script (cron + threshold)
