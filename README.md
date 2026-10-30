@@ -1,4 +1,5 @@
 # Linux Sysadmin Toolkit
+| scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
 
 Practical scripts and runbooks for common Linux server problems.
 
