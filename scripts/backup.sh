@@ -3,6 +3,7 @@
 # and delete backups older than N days.
 # Usage: ./backup.sh <source_dir> <backup_dir> [retention_days]
 set -euo pipefail
+umask 077   # backups readable only by the owner
 
 SRC="${1:-}"; DEST="${2:-}"; DAYS="${3:-7}"
 
