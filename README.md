@@ -8,6 +8,7 @@ Practical scripts and runbooks for common Linux server problems.
 | scripts/server-health-check.sh | Snapshot of disk, memory, CPU, failed services and open ports |
 | scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
 | scripts/log-cleanup.sh | Safe log compression and cleanup (dry-run by default) |
+| scripts/kvm-health-check.sh | Read-only KVM/libvirt host health report |
 
 ## Runbooks
 | Runbook | Purpose |
@@ -24,6 +25,7 @@ chmod +x scripts/server-health-check.sh
 ./scripts/backup.sh /path/to/source /path/to/backups 7
 ./scripts/log-cleanup.sh /var/log/myapp 7 30          # dry run
 ./scripts/log-cleanup.sh /var/log/myapp 7 30 --apply  # make changes
+sudo ./scripts/kvm-health-check.sh
 ```
 
 ## Tested on
@@ -32,7 +34,6 @@ Ubuntu (GitHub Codespaces container, no systemd)
 ## Roadmap
 - Disk usage alert script (cron + threshold)
 - SSH hardening checklist
-- KVM VM health-check script
 - Runbook: network connectivity troubleshooting
 
 Author: Jyothi Prakash
