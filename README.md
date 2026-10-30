@@ -19,8 +19,7 @@ Practical scripts and runbooks for common Linux server problems.
 chmod +x scripts/server-health-check.sh
 ./scripts/server-health-check.sh
 ```
-./scripts/backup.sh
-/path/to/source /path/to/backups 7
+./scripts/backup.sh /path/to/source /path/to/backups 7
 ...
 
 ## Tested on
