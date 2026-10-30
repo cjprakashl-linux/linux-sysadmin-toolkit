@@ -20,6 +20,8 @@ Practical scripts and runbooks for common Linux server problems.
 chmod +x scripts/server-health-check.sh
 ./scripts/server-health-check.sh
 ./scripts/backup.sh /path/to/source /path/to/backups 7
+./scripts/log-cleanup.sh /var/log/myapp 7 30          # dry run
+./scripts/log-cleanup.sh /var/log/myapp 7 30 --apply  # make changes
 ```
 
 ## Tested on
