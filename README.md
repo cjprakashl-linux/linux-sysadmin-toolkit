@@ -12,6 +12,7 @@ Practical scripts and runbooks for common Linux server problems.
 | Runbook | Purpose |
 |---|---|
 | docs/disk-full-troubleshooting.md | Diagnose and fix "disk full" issues |
+| docs/backup-with-cron.md | Schedule and verify automated backups |
 
 ## Usage
 ```
@@ -23,7 +24,6 @@ chmod +x scripts/server-health-check.sh
 Ubuntu (GitHub Codespaces container, no systemd)
 
 ## Roadmap
-- Backup script with cron
 - Log cleanup script
 - Runbooks: high CPU, service down
 
