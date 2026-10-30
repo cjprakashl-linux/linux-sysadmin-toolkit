@@ -1,5 +1,4 @@
 # Linux Sysadmin Toolkit
-| scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
 
 Practical scripts and runbooks for common Linux server problems.
 
@@ -7,6 +6,7 @@ Practical scripts and runbooks for common Linux server problems.
 | Script | Purpose |
 |---|---|
 | scripts/server-health-check.sh | Snapshot of disk, memory, CPU, failed services and open ports |
+| scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
 
 ## Runbooks
 | Runbook | Purpose |
