@@ -18,6 +18,7 @@ Practical scripts and runbooks for common Linux server problems.
 | docs/backup-with-cron.md | Schedule and verify automated backups |
 | docs/high-cpu-troubleshooting.md | Diagnose and fix high CPU usage |
 | docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
+| docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
 
 ## Usage
 ```
@@ -34,7 +35,6 @@ sudo ./scripts/kvm-health-check.sh
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
 
 ## Roadmap
-- SSH hardening checklist
 - Runbook: network connectivity troubleshooting
 
 Author: Jyothi Prakash
