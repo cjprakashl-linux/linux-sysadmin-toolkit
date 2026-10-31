@@ -1,5 +1,10 @@
 # Automated Backups with Cron
 
+## Alerting
+```
+*/30 * * * * /opt/scripts/disk-usage-alert.sh 80 90 >> /var/log/disk-alert.log 2>&1 || logger -p user.warning -t disk-alert "threshold exceeded"
+```
+
 ## Run manually
 ```
 ./scripts/backup.sh /var/www /backup 7
