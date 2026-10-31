@@ -26,6 +26,7 @@ X11Forwarding no
 sudo sshd -t
 sudo systemctl reload sshd
 ssh -v user@server
+`sudo sshd -t` prints nothing when the config is valid. An invalid config prints the bad line and exits with a non-zero code (255), so don't reload.
 ```
 The service may be named `ssh` on Debian/Ubuntu.
 
