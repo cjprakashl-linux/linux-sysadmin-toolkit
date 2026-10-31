@@ -19,6 +19,7 @@ Practical scripts and runbooks for common Linux server problems.
 | docs/high-cpu-troubleshooting.md | Diagnose and fix high CPU usage |
 | docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
 | docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
+| docs/network-troubleshooting.md | Diagnose network and DNS connectivity issues |
 
 ## Usage
 ```
@@ -33,8 +34,5 @@ sudo ./scripts/kvm-health-check.sh
 
 ## Tested on
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
-
-## Roadmap
-- Runbook: network connectivity troubleshooting
 
 Author: Jyothi Prakash
