@@ -9,6 +9,7 @@ Practical scripts and runbooks for common Linux server problems.
 | scripts/backup.sh | Timestamped tar.gz backup with retention cleanup |
 | scripts/log-cleanup.sh | Safe log compression and cleanup (dry-run by default) |
 | scripts/kvm-health-check.sh | Read-only KVM/libvirt host health report |
+| scripts/disk-usage-alert.sh | Threshold-based disk alert with exit codes for cron |
 
 ## Runbooks
 | Runbook | Purpose |
@@ -26,13 +27,13 @@ chmod +x scripts/server-health-check.sh
 ./scripts/log-cleanup.sh /var/log/myapp 7 30          # dry run
 ./scripts/log-cleanup.sh /var/log/myapp 7 30 --apply  # make changes
 sudo ./scripts/kvm-health-check.sh
+./scripts/disk-usage-alert.sh
 ```
 
 ## Tested on
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
 
 ## Roadmap
-- Disk usage alert script (cron + threshold)
 - SSH hardening checklist
 - Runbook: network connectivity troubleshooting
 
