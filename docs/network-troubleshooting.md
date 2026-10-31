@@ -21,6 +21,11 @@ ping -c 3 1.1.1.1          # internet by IP
 - Fails at gateway: cable, VLAN, interface or IP config
 - Works by IP but not by name: DNS problem
 
+If ping is missing or ICMP is blocked, test reachability with:
+```
+curl -sI https://<host> | head -1
+nc -vz <host> <port>
+```
 ## 3. Check DNS
 ```
 getent hosts example.com
