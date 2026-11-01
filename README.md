@@ -27,7 +27,7 @@ Every script is syntax-checked (`bash -n`), run against sample data, and tested 
 | docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
 | docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
 | docs/network-troubleshooting.md | Diagnose network and DNS connectivity issues |
-| docs/lvm-extend-resize.md | Extend an LVM volume safely 
+| docs/lvm-extend-resize.md | Extend an LVM volume safely |
 
 ## Usage
 ```
@@ -44,9 +44,11 @@ sudo ./scripts/user-audit.sh
 ```
 
 ## Tested on
-Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
+Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only. The LVM runbook is documentation and was not lab-tested, because containers don't support LVM. Scripts need GNU tools (date, openssl) and are Linux-only.
 
 ## Roadmap
-The LVM runbook is documentation. It was not lab-tested in Codespaces, because containers don’t support LVM.
+- Runbook: logrotate setup and troubleshooting
+- Script: pending package updates report
+- Runbook: firewall basics (ufw and firewalld)
 
 Author: Jyothi Prakash
