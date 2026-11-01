@@ -1,0 +1,5 @@
+Oct 30 07:01:02 host app[101]: ERROR connection refused to 10.0.0.5
+Oct 30 07:01:09 host app[101]: ERROR connection refused to 10.0.0.5
+Oct 30 07:02:15 host app[101]: WARN disk usage at 85
+Oct 30 07:03:40 host app[101]: ERROR timeout after 30 seconds
+Oct 30 07:03:55 host app[101]: INFO service started
