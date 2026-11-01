@@ -40,7 +40,7 @@ sudo ./scripts/kvm-health-check.sh
 ./scripts/disk-usage-alert.sh 80 90
 ./scripts/log-summary.sh docs/sample.log
 sudo ./scripts/user-audit.sh
-/scripts/ssl-expiry-check.sh example.com 443 30
+./scripts/ssl-expiry-check.sh example.com 443 30
 ```
 
 ## Tested on
