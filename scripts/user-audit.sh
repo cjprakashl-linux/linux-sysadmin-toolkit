@@ -16,6 +16,13 @@ for g in sudo wheel admin; do
   fi
 done
 
+echo "== Sudoers rules (root only) =="
+if [[ $EUID -eq 0 ]]; then
+  grep -hvE '^[[:space:]]*(#|$|Defaults)' /etc/sudoers /etc/sudoers.d/* 2>/dev/null
+else
+  echo "(run as root to read sudoers)"
+fi
+
 echo "== Accounts with empty passwords =="
 if [[ $EUID -eq 0 ]]; then
   awk -F: '($2=="") {print $1}' /etc/shadow
