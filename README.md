@@ -34,11 +34,16 @@ chmod +x scripts/server-health-check.sh
 ./scripts/log-cleanup.sh /var/log/myapp 7 30          # dry run
 ./scripts/log-cleanup.sh /var/log/myapp 7 30 --apply  # make changes
 sudo ./scripts/kvm-health-check.sh
-./scripts/disk-usage-alert.sh
+./scripts/disk-usage-alert.sh 80 90
 ./scripts/log-summary.sh docs/sample.log
 ```
 
 ## Tested on
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
+
+## Roadmap
+- Script: user-audit (read-only list of users, sudoers and last logins)
+- Runbook: LVM extend and resize
+- Script: SSL certificate expiry check
 
 Author: Jyothi Prakash
