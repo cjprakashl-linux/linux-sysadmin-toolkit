@@ -4,7 +4,7 @@
 set -uo pipefail
 
 LOG="${1:-}"; TOP="${2:-10}"
-if [[ -z "$LOG" || ! -r "$LOG" ]]; then
+if [[ -z "$LOG" || ! -f "$LOG" || ! -r "$LOG" ]]; then
   echo "Usage: $0 <readable_logfile> [top_n]" >&2
   exit 1
 fi
