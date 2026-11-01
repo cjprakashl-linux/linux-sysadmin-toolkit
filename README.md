@@ -27,6 +27,7 @@ Every script is syntax-checked (`bash -n`), run against sample data, and tested 
 | docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
 | docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
 | docs/network-troubleshooting.md | Diagnose network and DNS connectivity issues |
+| docs/lvm-extend-resize.md | Extend an LVM volume safely 
 
 ## Usage
 ```
@@ -46,6 +47,6 @@ sudo ./scripts/user-audit.sh
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
 
 ## Roadmap
-- Runbook: LVM extend and resize
+The LVM runbook is documentation. It was not lab-tested in Codespaces, because containers don’t support LVM.
 
 Author: Jyothi Prakash
