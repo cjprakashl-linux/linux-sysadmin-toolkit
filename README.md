@@ -11,6 +11,7 @@ Practical scripts and runbooks for common Linux server problems.
 | scripts/kvm-health-check.sh | Read-only KVM/libvirt host health report |
 | scripts/disk-usage-alert.sh | Threshold-based disk alert with exit codes for cron |
 | scripts/log-summary.sh | Summarise errors and warnings in a log file |
+| scripts/user-audit.sh | Read-only audit of users, sudo access and logins |
 
 ## How I test
 Every script is syntax-checked (`bash -n`), run against sample data, and tested on failure paths
@@ -36,13 +37,13 @@ chmod +x scripts/server-health-check.sh
 sudo ./scripts/kvm-health-check.sh
 ./scripts/disk-usage-alert.sh 80 90
 ./scripts/log-summary.sh docs/sample.log
+sudo ./scripts/user-audit.sh
 ```
 
 ## Tested on
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only.
 
 ## Roadmap
-- Script: user-audit (read-only list of users, sudoers and last logins)
 - Runbook: LVM extend and resize
 - Script: SSL certificate expiry check
 
