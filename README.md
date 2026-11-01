@@ -25,6 +25,7 @@ Every script is syntax-checked (`bash -n`), run against sample data, and tested 
 | docs/service-down-troubleshooting.md | Diagnose and fix a failed or unreachable service |
 | docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
 | docs/network-troubleshooting.md | Diagnose network and DNS connectivity issues |
+
 ## Usage
 ```
 chmod +x scripts/server-health-check.sh
