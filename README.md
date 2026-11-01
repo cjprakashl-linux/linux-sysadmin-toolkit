@@ -10,6 +10,11 @@ Practical scripts and runbooks for common Linux server problems.
 | scripts/log-cleanup.sh | Safe log compression and cleanup (dry-run by default) |
 | scripts/kvm-health-check.sh | Read-only KVM/libvirt host health report |
 | scripts/disk-usage-alert.sh | Threshold-based disk alert with exit codes for cron |
+| scripts/log-summary.sh | Summarise errors and warnings in a log file |
+
+## How I test
+Every script is syntax-checked (`bash -n`), run against sample data, and tested on failure paths
+(missing files, bad arguments). Scripts that change anything default to dry-run.
 
 ## Runbooks
 | Runbook | Purpose |
@@ -29,6 +34,7 @@ chmod +x scripts/server-health-check.sh
 ./scripts/log-cleanup.sh /var/log/myapp 7 30 --apply  # make changes
 sudo ./scripts/kvm-health-check.sh
 ./scripts/disk-usage-alert.sh
+./scripts/log-summary.sh docs/sample.log
 ```
 
 ## Tested on
