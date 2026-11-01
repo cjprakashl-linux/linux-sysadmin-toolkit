@@ -12,6 +12,7 @@ Practical scripts and runbooks for common Linux server problems.
 | scripts/disk-usage-alert.sh | Threshold-based disk alert with exit codes for cron |
 | scripts/log-summary.sh | Summarise errors and warnings in a log file |
 | scripts/user-audit.sh | Read-only audit of users, sudo access and logins |
+| scripts/ssl-expiry-check.sh | Check TLS certificate expiry, with exit codes for cron |
 
 ## How I test
 Every script is syntax-checked (`bash -n`), run against sample data, and tested on failure paths
@@ -38,6 +39,7 @@ sudo ./scripts/kvm-health-check.sh
 ./scripts/disk-usage-alert.sh 80 90
 ./scripts/log-summary.sh docs/sample.log
 sudo ./scripts/user-audit.sh
+/scripts/ssl-expiry-check.sh example.com 443 30
 ```
 
 ## Tested on
@@ -45,6 +47,5 @@ Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on i
 
 ## Roadmap
 - Runbook: LVM extend and resize
-- Script: SSL certificate expiry check
 
 Author: Jyothi Prakash
