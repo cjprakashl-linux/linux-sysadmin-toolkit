@@ -28,6 +28,7 @@ Every script is syntax-checked (`bash -n`), run against sample data, and tested 
 | docs/ssh-hardening.md | Secure SSH access with keys and safe config changes |
 | docs/network-troubleshooting.md | Diagnose network and DNS connectivity issues |
 | docs/lvm-extend-resize.md | Extend an LVM volume safely |
+| docs/logrotate.md | Configure and troubleshoot log rotation |
 
 ## Usage
 ```
@@ -47,7 +48,6 @@ sudo ./scripts/user-audit.sh
 Ubuntu (GitHub Codespaces container, no systemd). The KVM script was tested on its no-libvirt path only. The LVM runbook is documentation and was not lab-tested, because containers don't support LVM. Scripts need GNU tools (date, openssl) and are Linux-only.
 
 ## Roadmap
-- Runbook: logrotate setup and troubleshooting
 - Script: pending package updates report
 - Runbook: firewall basics (ufw and firewalld)
 
