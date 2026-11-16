@@ -4,8 +4,8 @@
 logrotate rotates, compresses and removes old log files so they do not fill the disk. Use this runbook when:
 - A log file keeps growing and is never rotated
 - You need to add rotation for a new application
-- A disk filled up because of logs (see `disk-full.md`)
-
+- A disk filled up because of logs (see `disk-full-troubleshooting.md`)
+  
 ## 2. How logrotate runs
 **Documentation only, not lab-tested.**
 - On most distributions logrotate runs once a day, started by either a systemd timer (`logrotate.timer`) or a cron.daily script.
@@ -86,7 +86,7 @@ total 20
 -rw-r--rw- 1 codespace codespace  602 Nov 16 09:26 results.txt
 -rw-r----- 1 codespace codespace   70 Nov 16 09:26 state
 ```
-What I observed: YOUR OWN SENTENCE HERE
+What I observed: After round 1, `app.log.1` (4292 bytes) was plain and nothing was compressed yet. After round 2, `app.log.1` (3292 bytes) was plain and `app.log.2.gz` (484 bytes) was compressed, because `delaycompress` leaves the newest rotated log uncompressed until the next rotation.
 
 ### Failure path: missing log with missingok
 I removed `app.log` and ran logrotate without `-v`. It printed nothing and exited with code 0:
@@ -108,8 +108,8 @@ Takeaway: a typo in a directive only produces a warning, the line is ignored, an
 - **Log not rotating:** check the size or schedule rules, the state file date, and that the config path is included from `/etc/logrotate.conf`. Run `logrotate -d` on the config.
 - **Wrong permissions on new log:** check the `create` line (mode, owner, group).
 - **Application still writes to the old file:** it keeps the old file open. Use `postrotate` to reload the service, or `copytruncate`.
-- **Disk still full after rotation or deletion:** a process may hold a deleted file open. Find it with `lsof +L1`, then restart that service. See `disk-full.md`.
-- **"Insecure permissions" style errors:** read the message. It usually points to a directory that is writable by others. Fix the permissions, or use the `su user group` directive. Record what you saw in section 7 if it happens in your lab.
+- **Disk still full after rotation or deletion:** a process may hold a deleted file open. Find it with `lsof +L1`, then restart that service. See `disk-full-troubleshooting.md`.
+- Finish logrotate runbook: observation, links, notes
 
 ## 9. Not tested
 - Real services and `postrotate` reloads
