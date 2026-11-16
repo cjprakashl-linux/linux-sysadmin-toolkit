@@ -109,7 +109,7 @@ Takeaway: a typo in a directive only produces a warning, the line is ignored, an
 - **Wrong permissions on new log:** check the `create` line (mode, owner, group).
 - **Application still writes to the old file:** it keeps the old file open. Use `postrotate` to reload the service, or `copytruncate`.
 - **Disk still full after rotation or deletion:** a process may hold a deleted file open. Find it with `lsof +L1`, then restart that service. See `disk-full-troubleshooting.md`.
-- - **"Insecure permissions" style errors:** logrotate can refuse a config or log directory that other users can write to. This did not occur in my lab (`app.conf` was `rw-r--r--` and logrotate accepted it). If you see it, read the message, fix the permissions, or use the `su user group` directive. Not lab-tested.
+-  **"Insecure permissions" style errors:** logrotate can refuse a config or log directory that other users can write to. This did not occur in my lab (`app.conf` was `rw-r--r--` and logrotate accepted it). If you see it, read the message, fix the permissions, or use the `su user group` directive. Not lab-tested.
 
 ## 9. Not tested
 - Real services and `postrotate` reloads
