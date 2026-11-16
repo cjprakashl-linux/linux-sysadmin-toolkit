@@ -56,33 +56,52 @@ logrotate -v -s /tmp/lrtest/state /tmp/lrtest/app.conf
 ```
 
 ## 7. Lab results
-Environment: GitHub Codespaces, run as a normal user.
+Environment: GitHub Codespaces (Ubuntu), logrotate 3.21.0, run as a normal user. `results.txt` in the listings is my output capture file, so ignore it.
 
-### Sample log before rotation
+### Before rotation
 ```
-PASTE REAL OUTPUT: ls -l app.log
+total 16
+-rw-r--r-- 1 codespace codespace  125 Nov 16 09:26 app.conf
+-rw-r--rw- 1 codespace codespace 4292 Nov 16 09:26 app.log
+-rw-r--rw- 1 codespace codespace   80 Nov 16 09:26 results.txt
 ```
 
 ### Round 1
 ```
-PASTE REAL OUTPUT: ls -l after the first real run
+total 20
+-rw-r--r-- 1 codespace codespace  125 Nov 16 09:26 app.conf
+-rw-r----- 1 codespace codespace    0 Nov 16 09:26 app.log
+-rw-r--rw- 1 codespace codespace 4292 Nov 16 09:26 app.log.1
+-rw-r--rw- 1 codespace codespace  282 Nov 16 09:26 results.txt
+-rw-r----- 1 codespace codespace   70 Nov 16 09:26 state
 ```
 
 ### Round 2 (delaycompress)
 ```
-PASTE REAL OUTPUT: ls -l after the second real run
+total 20
+-rw-r--r-- 1 codespace codespace  125 Nov 16 09:26 app.conf
+-rw-r----- 1 codespace codespace    0 Nov 16 09:26 app.log
+-rw-r----- 1 codespace codespace 3292 Nov 16 09:26 app.log.1
+-rw-r--rw- 1 codespace codespace  484 Nov 16 09:26 app.log.2.gz
+-rw-r--rw- 1 codespace codespace  602 Nov 16 09:26 results.txt
+-rw-r----- 1 codespace codespace   70 Nov 16 09:26 state
 ```
-What I observed: PASTE YOUR OWN SENTENCE about which file was plain and which was .gz, and why.
+What I observed: YOUR OWN SENTENCE HERE
 
 ### Failure path: missing log with missingok
+I removed `app.log` and ran logrotate without `-v`. It printed nothing and exited with code 0:
 ```
-PASTE REAL OUTPUT
+exit=0
 ```
 
-### Failure path: typo in config (`rotat 3`)
+### Failure path: typo in config (`rotat 3`), debug mode
 ```
-PASTE REAL OUTPUT: the exact error text
+error: bad.conf:3 unknown option 'rotat' -- ignoring line
+rotating pattern: /tmp/lrtest/app.log  1024 bytes (no old logs will be kept)
+log /tmp/lrtest/app.log does not exist -- skipping
+exit=0
 ```
+Takeaway: a typo in a directive only produces a warning, the line is ignored, and the defaults apply. Here that meant no old logs would be kept. Always run `-d` after editing a config and read the output for the word "error".
 
 ## 8. Troubleshooting
 **Documentation only, not lab-tested.**
